@@ -1,0 +1,113 @@
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #faf5ef; 
+    font-family: Arial, sans-serif; 
+    color: #332211; 
+    line-height: 1.6; 
+    padding: 20px;
+}
+
+/*контейнер-обгортка */
+.container {
+    max-width: 900px; 
+    margin: 0 auto;   
+    padding: 0 15px;
+}
+
+/*стилізація блоків-карток */
+.card {
+    background-color: #ffffff;      
+    padding: 20px;                  
+    border: 1px solid #e0e0e0;       /* Акуратна рамка */
+    border-radius: 8px;             
+    margin-bottom: 25px;            /* Зовнішній відступ знизу між картками */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+}
+
+#page-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #5c3a21;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #8c6239;
+    border-bottom: 2px solid #d9c5b2; 
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.intro {
+    font-size: 18px; 
+    text-align: center; 
+    color: #665544; 
+}
+
+.highlight {
+    background-color: #f0e1d2; 
+    border-radius: 3px; 
+}
+
+a {
+    color: #b94a24; 
+    font-size: 21px;
+    font-weight: bold; 
+}
+
+ul {
+    padding-left: 20px; 
+}
+
+ol {
+    color: #554433; 
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px; 
+}
+
+/*стилізація таблиці */
+table {
+    width: 100%;               /* Ширина на всю картку */
+    border-collapse: collapse; /* Об'єднуємо подвійні межі */
+    margin-top: 15px;
+}
+
+th, td { 
+    padding: 10px 12px;   
+    border: 1px solid #ccc;    
+    text-align: left;
+}
+
+th {
+    background-color: #f0e1d2; 
+    color: #5c3a21;
+}
+
+/* cтилізація фоток та галереї */
+.gallery {
+    display: flex;             /* розміщуємо картинки в ряд */
+    flex-wrap: wrap;           
+    gap: 15px;                 
+    margin-top: 15px;
+}
+
+img {
+    max-width: 100%;           /* Адаптивність за методичкою */
+    height: auto;    
+}
+/* pадаємо розмір для картинок саме всередині галереї */
+.gallery img {
+    width: 200px;              
+    height: 200px;             
+}
