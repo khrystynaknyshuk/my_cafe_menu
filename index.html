@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -8,15 +9,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="top">
+
+    <!-- закріплена шапка -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">Villa Maria</div>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#about">Головна</a></li>
+                    <li><a href="#menu">Основне меню</a></li>
+                    <li><a href="#gallery">Десерти</a></li>
+                    <li><a href="#recipe">Рецепт</a></li>
+                    <li><a href="#popular">Популярність</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        
-        <div class="card">
+
+        <!-- привітання -->
+        <section class="card page-section" id="about">
             <h1 id="page-title">Вітаємо!</h1>
             <p class="intro">Кафе "Villa Maria"<br><em>Ми - твоє улюблене місце для смачних перерв</em></p>
-        </div>
+        </section>
 
-        <div class="card">
+        <!-- основне меню -->
+        <section class="card page-section" id="menu">
             <h2 class="section-title">Основне меню:</h2>
             <ul>
                 <li>Картопля смажена</li>
@@ -27,9 +48,12 @@
                 <li>Форель гриль</li>
                 <li>Стейк <strong class="highlight">з шапки білого гриба</strong></li>
             </ul>
-        </div>
+        </section>
 
-        <div class="card">
+        <!-- десерти та галерея -->
+        <section class="card page-section dessert-section" id="gallery">
+            <span class="badge">ХІТ</span>
+
             <h2 class="section-title">Десерти:</h2>
             <ul>
                 <li>Морозиво <strong class="highlight">з карамелізованою грушею</strong></li>
@@ -37,20 +61,23 @@
                 <li>Вареники на <strong class="highlight">пару</strong></li>
                 <li>Галета <strong class="highlight">з грушею</strong></li>
             </ul>
-            
-            <p style="margin-top: 15px;"><strong class="highlight">Зображення наших десертів:</strong></p>
-            <div class="gallery">
-                <img src="images/galeta.png">
-                <img src="images/icecream.png">
-                <img src="images/dumplings.png">
-                <img src="images/icecream_with_fruits.png">
-            </div>
-        </div>
 
-        <div class="card">
-            <p><strong class="highlight">Ось посилання на приготування нашого найсмачнішого десерту <em>"галета з грушею"</em> </strong></p>
+            <p style="margin-top: 15px;"><strong class="highlight">Зображення наших десертів:</strong></p>
+
+            <div class="grid-gallery">
+                <img src="images/galeta.png" alt="Галета з грушею">
+                <img src="images/icecream.png" alt="Морозиво">
+                <img src="images/dumplings.png" alt="Вареники">
+                <img src="images/icecream_with_fruits.png" alt="Морозиво з фруктами">
+            </div>
+        </section>
+
+        <!-- рецепт -->
+        <section class="card page-section" id="recipe">
+            <p><strong class="highlight">Ось посилання на приготування нашого найсмачнішого десерту <em>"галета з грушею"</em></strong></p>
+
             <a href="https://youtu.be/wh3JZHbTRFQ?si=GTvf2RvblvwfmOyZ">НАЖМИ ТУТ</a>
-            
+
             <h3 class="section-title" style="margin-top: 20px;">Інгредієнти для приготування цього ж десерту:</h3>
             <ol>
                 <li>100 г сметани</li>
@@ -61,10 +88,12 @@
                 <li>3 ст. л. води</li>
                 <li>дрібка солі</li>
             </ol>
-        </div>
+        </section>
 
-        <div class="card">
+        <!--популярність десертів -->
+        <section class="card page-section" id="popular">
             <h2 class="section-title">Популярність наших десертів за тиждень</h2>
+
             <table>
                 <tr>
                     <th>Десерт</th>
@@ -97,9 +126,15 @@
                     <td>Найкращий результат</td>
                 </tr>
             </table>
-        </div>
+        </section>
 
     </div>
-</body>
 
+    <footer class="site-footer">
+        <p>© Villa Maria</p>
+    </footer>
+
+    <a href="#top" class="back-to-top" aria-label="Повернутися нагору">↑</a>
+
+</body>
 </html>
