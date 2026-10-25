@@ -1,11 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню кафе "Villa Maria"</title>
+    <!-- ЗМІНЕНО: title у форматі "Тема — слоган", до 60 символів -->
+    <title>Villa Maria — Меню кафе та десерти</title>
+    <!-- ДОДАНО: мета-теги для пошукових систем -->
+    <meta name="description" content="Кафе Villa Maria: меню смачних українських страв, десерти з грушею та фруктами, рецепт галети та популярність десертів за тиждень.">
+    <meta name="keywords" content="кафе, меню, десерти, галета з грушею, рецепт, борщ, Villa Maria">
+    <meta name="author" content="Прізвище Ім'я">
+    <!-- ДОДАНО: Open Graph для соцмереж -->
+    <meta property="og:title" content="Villa Maria — Меню кафе та десерти">
+    <meta property="og:description" content="Меню українських страв, десерти та рецепт галети з грушею.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/galeta.png">
+    <!-- ДОДАНО: іконка вкладки браузера (файл лежить у папці images, тип jpeg) -->
+    <link rel="icon" href="images/favicon_io.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +27,8 @@
         <div class="header-container">
             <div class="logo">Villa Maria</div>
 
-            <nav>
+            <!-- ДОДАНО: aria-label, щоб скрінрідер знав призначення меню -->
+            <nav aria-label="Головне меню сайту">
                 <ul class="nav-list">
                     <li><a href="#about">Головна</a></li>
                     <li><a href="#menu">Основне меню</a></li>
@@ -28,11 +40,14 @@
         </div>
     </header>
 
-    <div class="container">
+    <!-- ЗМІНЕНО: div замінено на main з id="main-content" (header і footer лишились поза ним) -->
+    <main class="container" id="main-content">
 
         <!-- привітання -->
         <section class="card page-section" id="about">
             <h1 id="page-title">Вітаємо!</h1>
+            <!-- ДОДАНО: заголовок h2, бо кожна секція повинна його мати -->
+            <h2 class="section-title">Про наше кафе</h2>
             <p class="intro">Кафе "Villa Maria"<br><em>Ми - твоє улюблене місце для смачних перерв</em></p>
         </section>
 
@@ -48,6 +63,11 @@
                 <li>Форель гриль</li>
                 <li>Стейк <strong class="highlight">з шапки білого гриба</strong></li>
             </ul>
+
+            <!-- ДОДАНО: довідковий блок aside з цікавим фактом -->
+            <aside>
+                <p><strong>Цікавий факт:</strong> бограч - це густий суп, який традиційно варять у казанку на відкритому вогні.</p>
+            </aside>
         </section>
 
         <!-- десерти та галерея -->
@@ -64,30 +84,37 @@
 
             <p style="margin-top: 15px;"><strong class="highlight">Зображення наших десертів:</strong></p>
 
+            <!-- ЗМІНЕНО: alt зробили більш інформативними -->
             <div class="grid-gallery">
-                <img src="images/galeta.png" alt="Галета з грушею">
-                <img src="images/icecream.png" alt="Морозиво">
-                <img src="images/dumplings.png" alt="Вареники">
-                <img src="images/icecream_with_fruits.png" alt="Морозиво з фруктами">
+                <img src="images/galeta.png" alt="Галета з грушею - наш найсмачніший десерт">
+                <img src="images/icecream.png" alt="Порція морозива з карамелізованою грушею">
+                <img src="images/dumplings.png" alt="Вареники на пару на тарілці">
+                <img src="images/icecream_with_fruits.png" alt="Морозиво з сезонними фруктами">
             </div>
         </section>
 
         <!-- рецепт -->
         <section class="card page-section" id="recipe">
-            <p><strong class="highlight">Ось посилання на приготування нашого найсмачнішого десерту <em>"галета з грушею"</em></strong></p>
+            <!-- ДОДАНО: заголовок h2 для секції -->
+            <h2 class="section-title">Рецепт десерту</h2>
 
-            <a href="https://youtu.be/wh3JZHbTRFQ?si=GTvf2RvblvwfmOyZ">НАЖМИ ТУТ</a>
+            <p><strong class="highlight">Ось посилання на приготування нашого найсмачнішого десерту</strong></p>
 
-            <h3 class="section-title" style="margin-top: 20px;">Інгредієнти для приготування цього ж десерту:</h3>
-            <ol>
-                <li>100 г сметани</li>
-                <li>300 г борошна</li>
-                <li>120 г масла</li>
-                <li>1 ч. л. розпушувача</li>
-                <li>120 г масла</li>
-                <li>3 ст. л. води</li>
-                <li>дрібка солі</li>
-            </ol>
+            <a href="https://youtu.be/wh3JZHbTRFQ?si=GTvf2RvblvwfmOyZ">ГАЛЕТА З ГРУШЕЮ</a>
+
+            <!-- ЗМІНЕНО: блок з інгредієнтами тепер семантична картка article -->
+            <article class="card">
+                <h3 class="section-title" style="margin-top: 20px;">Інгредієнти для приготування цього ж десерту:</h3>
+                <ol>
+                    <li>100 г сметани</li>
+                    <li>300 г борошна</li>
+                    <li>120 г масла</li>
+                    <li>1 ч. л. розпушувача</li>
+                    <li>120 г масла</li>
+                    <li>3 ст. л. води</li>
+                    <li>дрібка солі</li>
+                </ol>
+            </article>
         </section>
 
         <!--популярність десертів -->
@@ -128,13 +155,18 @@
             </table>
         </section>
 
-    </div>
+    </main>
 
     <footer class="site-footer">
         <p>© Villa Maria</p>
+        <!-- ДОДАНО: автор, рік, дисципліна та контакти -->
+        <p>Автор: Книшук Христина, 2026 рік</p>
+        <p>Дисципліна: Основи web-розробки</p>
+        <p>Контакти: khknyschuk30@gmail.com</p>
     </footer>
 
-    <a href="#top" class="back-to-top" aria-label="Повернутися нагору">↑</a>
+    <!-- ЗМІНЕНО: aria-label за завданням -->
+    <a href="#top" class="back-to-top" aria-label="Повернутися на початок сторінки">↑</a>
 
 </body>
 </html>

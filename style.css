@@ -225,3 +225,20 @@ th {
 .back-to-top:hover {
     background-color: #5c3a21;
 }
+
+/* ДОДАНО: нові семантичні теги мають бути блоковими */
+main,
+article,
+aside {
+    display: block;
+}
+
+/* ДОДАНО: стиль виділеної нотатки для aside */
+aside {
+    background-color: #fff4d6;      /* м'який пастельний фон */
+    border-left: 5px solid #b94a24; /* вертикальна акцентна лінія зліва */
+    padding: 12px 15px;             /* внутрішні відступи */
+    margin-top: 15px;
+    font-style: italic;             /* курсивний шрифт */
+    font-size: 15px;                /* зменшений шрифт */
+}
